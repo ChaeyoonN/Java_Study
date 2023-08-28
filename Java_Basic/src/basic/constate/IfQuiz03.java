@@ -31,7 +31,7 @@ public class IfQuiz03 {
 		
 		int max, mid, min;
 		//초기화 안하고 빨간줄->못찾은 경우의 수가 있음
-		if(n1>n2 && n1>n3)? max=n1:(n2>n3)? mid=n2:
+		(n1>n2 && n1>n3)? max=n1:(n2>n3)? mid=n2 : mid=n3);
 	
 		if(n1>n2) {
 			if(n1>n3) {
