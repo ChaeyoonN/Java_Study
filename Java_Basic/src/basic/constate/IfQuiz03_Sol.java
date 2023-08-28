@@ -24,7 +24,7 @@ public class IfQuiz03_Sol {
         System.out.print("정수 3: ");
         int num3 = sc.nextInt();
         
-        int max, mid, min;
+        int max, mid, min;//초기화 안하고 빨간줄->못찾은 경우의 수가 있음
         
         if(num1 > num2 && num1 > num3) { //num1 이 max다!
             max = num1;

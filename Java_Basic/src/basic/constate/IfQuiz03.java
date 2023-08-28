@@ -29,69 +29,18 @@ public class IfQuiz03 {
 		
 //		int max = 0, mid = 0, min = 0;
 		
-		int max, mid, min;
+		int max_num, mid_num, min_num;
 		//초기화 안하고 빨간줄->못찾은 경우의 수가 있음
-		(n1>n2 && n1>n3)? max=n1:(n2>n3)? mid=n2 : mid=n3);
-	
-		if(n1>n2) {
-			if(n1>n3) {
-				max = n1;
-				if(n2>n3) {
-					mid = n2;
-					min = n3;
-				}else {
-					mid = n3;
-					min = n2;
-				}
-			}
-		}else if(n2>n3) {
-			max = n2;
-			if(n1>n3) {
-				mid = n1;
-				min = n3;
-			}else {
-				mid = n3;
-				min = n1;
-			}
-		}else {//n1<n2 || n2<n3
-			if(n1<n2) {//n1<n2
-				if(n2<n3) {
-					max = n3;
-					if(n1>n2) {
-						mid = n1;
-						min = n2;
-					}else {
-						mid = n2;
-						min = n1;
-					}
-					
-				}
-			}else {//n2<n3
-				if(n1<n2) {
-					max = n3;
-					if(n1>n2) {
-						mid = n1;
-						min = n2;
-					}else {
-						mid = n2;
-						min = n1;
-					}
-	
-				}
-			}
-//			max = n3;
-//			if(n1>n2) {
-//				mid = n1;
-//				min = n2;
-//			}else {
-//				mid = n2;
-//				min = n1;
-//			}
-		}//3번째 끝
+
+		max_num = (n1 >= n2 && n1 >= n3) ? n1 : (n2 >= n1 && n2 >= n3) ? n2 : n3;
+        min_num = (n1 <= n2 && n1 <= n3) ? n1 : (n2 <= n1 && n2 <= n3) ? n2 : n3;
+        mid_num = (n1 != max_num && n1 != min_num) ? n1 : (n2 != max_num && n2 != min_num) ? n2 : n3;
 		
-		System.out.println("가장 큰 값:"+max);
-		System.out.println("중간 값:"+mid);
-		System.out.println("가장 작은 값:"+min);
+		
+		System.out.println("가장 큰 값:"+max_num);
+		System.out.println("중간 값:"+mid_num);
+		System.out.println("가장 작은 값:"+min_num
+				);
 		
 		sc.close();
 
