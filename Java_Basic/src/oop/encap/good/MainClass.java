@@ -9,7 +9,7 @@ public class MainClass {
 		
 		my.setYear(1992);
 		my.setMonth(10);
-		my.setDay(130);
+		my.setDay(13);
 		
 		
 		

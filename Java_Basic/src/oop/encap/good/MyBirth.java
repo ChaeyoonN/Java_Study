@@ -12,7 +12,7 @@ public class MyBirth {
 	private int year;
 	private int month;
 	private int day;
-	private boolean flag;
+//	private boolean flag;
 	
 	/*
 	 - 정보 은닉은 데이터에 접근 제한을 걸어서 정보를 보호하는 것이 목적이지만
@@ -36,6 +36,7 @@ public class MyBirth {
 	public void setYear(int year) {
 		if(year < 1900 || year >2023) {
 			System.out.println("잘못된 연도 입력입니다.");
+//			flag = true;
 		}else {
 			this.year = year;
 		}
@@ -63,6 +64,7 @@ public class MyBirth {
 	public void setMonth(int month) {
 		if(month < 1 || month > 12) {
 			System.out.println("잘못된 달 입력입니다.");
+//			flag = true;
 		}else {
 			this.month = month;
 		}
@@ -74,10 +76,19 @@ public class MyBirth {
 	public void setDay(int day) {
 		if(day < 1 || day > 31) {
 			System.out.println("잘못된 날짜 입력입니다.");
+//			flag = true;
 		}else {
+			if(this.month == 0) {
+				System.out.println("일자를 입력하기 위해서는 월 입력이 선행되어야 합니다.");
+				return;
+			}
+			if(!this.isValidMonth(day)) {
+				System.out.println("월에 따른 일자가 올바르지 않습니다.");
+				return;
+			}
 			this.day = day;
 		}
-		this.isValidMonth(day);
+		
 	}
 	public int getDay() {
 		return this.day;
@@ -87,29 +98,35 @@ public class MyBirth {
 	public void birthInfo() {
 		//year, month, day 셋 중 단 하나라도 제대로 값이 셋팅되지 않았다면
 		//출력을 해주지 않겠다.
-		if(year==0 || month==0 || day==0) {
-			
-		}else {
-			System.out.printf("내 생일은 %d년 %d월 %d일입니다.\n", 
-					this.getYear("aaa1111!"), this.getMonth(), this.getDay());
+		if(year==0 || month==0 || day==0) {//this.year = year;와 같이
+			//값이 세팅되지 않는다면 기본값으로 세팅되므로
+//		if(flag) {
+			System.out.println("날짜 필드 중에 초기화되지 않은 데이터가 있습니다.");
+			return;
 		}
+		System.out.printf("내 생일은 %d년 %d월 %d일입니다.\n", 
+				this.getYear("aaa1111!"), this.getMonth(), this.getDay());
 		
 	}
 	
-	public void isValidMonth(int day) {
+	private boolean isValidMonth(int day) {
 		//각 월에 적합한 일자가 셋팅이 되어 있는지를 판별하는 메서드
 		switch(month) {
 		
 		case 2://28일(2023)
 			if(day > 28) {
-				flag = true;
+//				flag = true;
+				return false;
 			}
-			break;
+			
 		case 4: case 6: case 9: case 11://30일
 			if(day > 30) {
-				flag = true;
+//				flag = true;
+				return false;
 			}
-			break;
+			
+		default:
+			return true;
 		}
 		
 	}
