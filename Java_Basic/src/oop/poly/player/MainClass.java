@@ -37,6 +37,11 @@ public class MainClass {
 //		m1.blizzard(w1, w2, m2, h1, h2); 이렇게 호출하고 가변인수로 받게 할 수 있음.
 		
 		w1.attack(m1);
+		
+		
+		w1.rush(m1);
+		w1.rush(w1);
+		w1.rush(h1);
 
 	}
 

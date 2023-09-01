@@ -53,8 +53,10 @@ public class MainClass {
 			
 			System.out.println("--------------------");
 			
-			Car c = kim.buyCar("소나타");
-			c.run();
+			Tesla myTesla = (Tesla) kim.buyCar("테슬라");//방법1: 리턴값을 테슬라타입으로 받기
+//			c.run();
+//			Tesla myTesla = (Tesla) c;//방법2: 주소값 넘기기
+			myTesla.activeAutopilot();
 			
 	}
 

@@ -17,7 +17,7 @@ public class Mage extends Player {
 		System.out.println(this.name+"님이 눈보라 시전!!!");
 		this.mana -= 30;
 		System.out.println("30의 마나가 소모됩니다. 남은 정신력: "+this.mana);
-		System.out.println("----------------------");
+		System.out.println("----------------------------");
 		
 		for(int i=0; i<p.length; i++) {//향상 for문 써도 됌.
 			int damage = (int)(Math.random()*6)+10;
@@ -25,7 +25,7 @@ public class Mage extends Player {
 			System.out.println(p[i].name+"님이 "+damage+"의 피해를 입었습니다. (남은 체력: "+
 			(p[i].hp)+")");
 		}
-		
+		System.out.println("=====================================");
 		
 	}
 	

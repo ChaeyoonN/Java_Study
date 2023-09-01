@@ -42,6 +42,7 @@ public class Player extends Object {
 		this.hp += 5;
 		System.out.println("나의 체력: "+this.hp+", "+"상대의 체력: "+target.hp);
 		
+		System.out.println("==========================");
 	}
 	
 	void characterInfo() {

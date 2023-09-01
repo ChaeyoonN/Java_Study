@@ -34,6 +34,7 @@ public class MainClass {
 		
 //		for(int i=0; i<people.length; i++) {
 //			people[i].personInfo();
+			//주솟값.메서드;
 //		}
 		
 		for(Person p : people) {
