@@ -16,13 +16,17 @@ public class MainClass {
         - MainClass에서 길이가 5인 정사각형,
          반지름이 4인 원의 모든 내용을 호출해 보세요.
         */
-		Shape c = new Circle("원1", 4);
-		c.getName();
-		System.out.printf("넓이: %.1f\n", c.getArea());
+		Shape c = new Circle("원1", 4); //다형성 적용
+//		c.getName();
+		System.out.printf("도형의 이름: %s\n", c.getName());
+		System.out.printf("%s의 넓이: %.2f\n\n", c.getName(), c.getArea());
 		
 		Shape r = new Rect("정사각형1", 5);
-		r.getName();
-		System.out.printf("넓이: %.1f\n", r.getArea());
+//		r.getName();
+		System.out.printf("도형의 이름: %s\n", r.getName());
+		System.out.printf("%s의 넓이: %.1f\n", r.getName(), r.getArea());
+		
+		
 		
 		
 

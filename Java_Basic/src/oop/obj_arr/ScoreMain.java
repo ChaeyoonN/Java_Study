@@ -32,10 +32,6 @@ public class ScoreMain {
 		
 		int i = 0; //객체 배열 인덱스
 		while(true) {
-			boolean flag = false;
-			
-			
-			
 			System.out.print("이름 입력: ");
 			String name = sc.next();
 			
@@ -52,23 +48,32 @@ public class ScoreMain {
 				System.out.print("국어성적 입력: ");
 				int korean = sc.nextInt();
 				arr[i].setKorean(korean);
+				if(Score.flag) {
+					continue;
+				}
 				count++;
 				
 				System.out.print("영어성적 입력: ");
 				int english = sc.nextInt();
 				arr[i].setEnglish(english);
+				if(Score.flag) {
+					continue;
+				}
 				count++;
 				
 				System.out.print("수학성적 입력: ");
 				int math = sc.nextInt();
 				arr[i].setMath(math);
+				if(Score.flag) {
+					continue;
+				}
 				count++;
 				
 				if(count != 3) {
 					System.out.println("모든 과목의 성적을 입력해야 합니다.");
 					continue;
 				}else {
-					System.out.println("한 학생 성적 입력이 완료됐습니다.");
+					System.out.println("한 학생의 성적 입력이 완료됐습니다.");
 					System.out.println("\"그만\" 입력 시 입력받기가 종료됩니다.");
 					break;
 				}
@@ -84,12 +89,15 @@ public class ScoreMain {
 			arr[i].setAvg();
 			i++;
 			
-			
 		}//end of while
 		
 		for(Score s : arr) {
+			if(s==null) break;
 			s.scoreInfo();
 		}
+		
+		
+		sc.close();
 
 	}
 
