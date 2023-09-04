@@ -17,6 +17,7 @@ public class MainClass {
 		Singleton s4 = Singleton.getInstance();
 		Singleton s5 = Singleton.getInstance();
 
+		
 		System.out.println(s1);
 		System.out.println(s2);
 		System.out.println(s3);

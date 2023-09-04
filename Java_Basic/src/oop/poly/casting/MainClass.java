@@ -59,6 +59,7 @@ public class MainClass {
 		Parent ppp = new Parent();
 //		Child ccc = (Child) ppp; (x)
 		
+		
 	}
 
 }

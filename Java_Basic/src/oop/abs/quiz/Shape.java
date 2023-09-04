@@ -26,8 +26,18 @@ public abstract class Shape {
 	//메서드
 	public abstract double getArea();
 	
-	public void getName() {
-		System.out.println("도형의 이름: "+this.name);
+//	public void getName() {
+//		System.out.println("도형의 이름: "+this.name);
+//	}
+	
+	
+	//풀이(은닉): 필드에 private -> getter/setter 구현
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	

@@ -9,15 +9,19 @@ public class Singleton {
 	 1. 외부에서 이 클래스의 객체를 생성하지 못하게 생성자를 단 1개만 
 	 선언하고, private 접근 제한을 붙임.
 	 */
+	//생성자
 	private Singleton() {
 		System.out.println("객체가 생성됨!");
 	}
+	
 	//2. 생성자를 호출할 수 있는 영역은 같은 클래스 내부 뿐이므로
 	//자신의 클래스 내부에서 스스로의 객체를 단 1개만 생성함.
 	private static Singleton s = new Singleton();//객체 주소값 저장.
 	
+	
 	//3. 외부에서 이 클래스의 객체를 요구할 시, 2번에서 미리 만들어 놓은
 	//단 하나의 객체의 주소값을 공개된 메서드를 통해 리턴합니다.
+	//메서드
 	public static Singleton getInstance() {
 		return s;// 이 메서드를 사용해서만 객체에 접근하도록 한다.
 	}
