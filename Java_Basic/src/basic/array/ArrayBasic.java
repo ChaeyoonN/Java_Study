@@ -77,7 +77,7 @@ public class ArrayBasic {
 		String[] names = {"홍길동","김철수", "박영희"};
 //		names = {"홍길동","김철수", "박영희", "김뽀삐"}; (x)
 		names = new String[] {"홍길동","김철수","박영희", "김뽀삐"};
-//		System.out.println(Arrays.toString(names));
+		System.out.println(Arrays.toString(names));
 	}
 
 }

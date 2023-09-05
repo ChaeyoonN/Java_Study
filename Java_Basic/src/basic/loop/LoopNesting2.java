@@ -26,17 +26,17 @@ public class LoopNesting2 {
     	   for(int j=1; j<=i;j++) {//j는 소수 판별 위해 나눠보는 수
     		   if(i % j == 0) cnt++;
     		
-    		   if(cnt==2) {
-        		   System.out.print(i + " ");
-        		   count++;
-        	   }//약수가 2개 이상인 수가 j가 약수가 2개가 될 때부터 i가 되기 전까지
+//    		   if(cnt==2) {
+//        		   System.out.print(i + " ");
+//        		   count++;
+//        	   }//약수가 2개 이상인 수가 j가 약수가 2개가 될 때부터 i가 되기 전까지
     		   //i가 출력되므로 여기 쓰면 안된다.
     		   
     	   }
-//    	   if(cnt==2) {
-//    		   System.out.print(i + " ");
-//    		   count++;
-//    	   }
+    	   if(cnt==2) {
+    		   System.out.print(i + " ");
+    		   count++;
+    	   }
        }
        System.out.println("\n소수의 개수: "+count+"개");
        

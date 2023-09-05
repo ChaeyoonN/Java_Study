@@ -24,15 +24,20 @@ public class WhileQuiz02_Sol {
         int num1 = sc.nextInt();
         System.out.print("정수2: ");
         int num2 = sc.nextInt();
-        /*
-        if(num1 > num2) {
-            int temp = num1;
-            num1 = num2;
-            num2 = temp;
-        }
         
-        int n = num1;
-        */
+//        int sum = 0;
+//        if(num1 > num2) {
+//            int temp = num1;
+//            num1 = num2;
+//            num2 = temp;
+//        }
+//        for(int i=num1; i<=num2; i++) {
+//        		sum += i;
+//        		
+//        }
+//        System.out.printf("%d부터 %d까지의 누적합계: %d\n", num1, num2, sum);
+       
+        
         
         int start = (num1 > num2 ? num2 : num1);
         int end = (num1 > num2 ? num1 : num2);
