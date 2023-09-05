@@ -33,7 +33,7 @@ public class MainClass {
 		
 		//연산자의 우선순위
 		//괄호() -> 참조() -> 단항 -> 2항 -> 3항 -> 대입
-		((ImplClass1)it1).method2();
+		((ImplClass1)it1).method2(); //// it1이 Inter타입이므로 형 변환
 		
 		/*
         - 인터페이스의 다형성도 앞에서 배운 클래스의 다형성처럼
@@ -48,7 +48,7 @@ public class MainClass {
 		Inter2 it2 = new ImplClass1();
 		it2.method2();
 		it2.parentMethod();
-		((Inter) it2).method1();
+		((Inter) it2).method1();// it2가 Inter2타입이므로 형 변환
 		
 		Inter it3 = new ImplClass2();
 		Inter2 it4 = new ImplClass3();
