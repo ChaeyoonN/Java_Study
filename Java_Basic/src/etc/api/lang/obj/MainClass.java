@@ -5,7 +5,7 @@ public class MainClass {
 	public static void main(String[] args) {
 		
 		Person park = new Person("박영희", 25);
-		Person hong = new Person("홍길동", 25);
+		Person hong = new Person("박영희", 25);
 		
 //		park.personInfo();
 //		hong.personInfo();
@@ -20,6 +20,7 @@ public class MainClass {
 		
 		if(hong.equals(park)) {
 			System.out.println("이름과 나이가 같네요!");
+			System.out.println("각각의 주소값: "+hong.hashCode()+"과 "+park.hashCode());
 		}else {
 			System.out.println("이름이 다를 수도, 나이가 다를 수도, 둘 다 다를 수도...");
 		}
