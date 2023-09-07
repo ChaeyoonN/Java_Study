@@ -26,6 +26,7 @@ public class StringQuiz01 {
 				System.out.println("아이디는 5글자 이상이어야 합니다.");
 			}else {
 				System.out.println("ID가 등록되었습니다.");
+				break;
 			}
 			
 //			if(id.trim().length()>=5) {
@@ -34,7 +35,7 @@ public class StringQuiz01 {
 		}
 		
 		
-		
+		sc.close();
 
 	}
 

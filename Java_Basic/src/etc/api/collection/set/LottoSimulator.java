@@ -17,7 +17,7 @@ public class LottoSimulator {
     static int prize3 = 0; //3등 당첨 횟수를 세 줄 변수
     static int prize4 = 0; //4등 당첨 횟수를 세 줄 변수
     static int prize5 = 0; //5등 당첨 횟수를 세 줄 변수
-    static int failCnt = 0; // 당첨 횟수를 세 줄 변수
+    static int failCnt = 0; // 미당첨 횟수를 세 줄 변수
 //    static int count = 0;//같을때의 횟수 셀 변수 여기 선언 금지!
     
     
@@ -45,6 +45,20 @@ public class LottoSimulator {
     	
     	return randomNums;
     	
+    	
+    	//리스트 사용하는 방법
+//    	List<Integer> lotto = new ArrayList<>();
+//    	
+//    	while(lotto.size() < 6) {
+//    		int num = r.nextInt(45)+1;
+//    		if(!lotto.contains(num)) {
+//    			lotto.add(num);
+//    		}
+//    	}
+//    	return lotto; //리스트를 리턴
+    	
+    	
+    	
     }
 //    
 //    
@@ -56,23 +70,15 @@ public class LottoSimulator {
 //          당첨번호들을 피해서 보너스번호 하나만 뽑아 주세요.
 //          범위는 마찬가지로 1 ~ 45 사이의 난수입니다.
 //         */
-		int bonusR=0;
+		
 		while(true) {
-			bonusR = r.nextInt(45)+1;
+			int bonusR = r.nextInt(45)+1;
 			if(!randomNums.contains(bonusR)) {
 				return bonusR;
 			}
 		}
+    	
 		
-//    	for(Integer n : randomNums) {
-//    		bonusR = r.nextInt(45)+1;
-//    		int transN = n;
-//    		if(transN==bonusR) {
-//    			continue;
-//    		}
-//    	}
-//    	
-//		return bonusR;
     
     }
   
@@ -113,7 +119,7 @@ public class LottoSimulator {
     	
     	int count = 0;
     	
-    	for(int n : buy) {
+    	for(int n : buy) { //오토언박싱해주므로 Integer말고 int라고 써도 됌!
     		if(randomNums.contains(n)) count++;
     	}
     	
@@ -138,14 +144,14 @@ public class LottoSimulator {
 		
     	//로또 번호 생성 메서드를 호출해서 당첨 번호를 하나 고정시키세요.
     	Set<Integer> randomNums = createLotto();
-    	System.out.println(randomNums);
+//    	System.out.println("당첨 번호: "+randomNums);
         
         //보너스번호도 하나 고정시키세요.
     	int bonusNum = createBonusNum(randomNums);
-    	System.out.println(bonusNum);
+//    	System.out.println("보너스 번호: "+bonusNum);
     	
         int tryNum = 0;
-        
+        long cost = 0;
         while(true) {
             /*
              - 1등이 당첨 될 때까지 반복문을 돌립니다.
@@ -155,28 +161,36 @@ public class LottoSimulator {
              */
         	
         	Set<Integer> mine = createLotto();
-        	tryNum++;
-        	System.out.printf("%d번째 내가 고른 로또 번호: %s\n", tryNum, mine);
+        	tryNum++; cost +=1000;
+//        	System.out.printf("%d번째 내가 고른 로또 번호: %s\n", tryNum, mine);
         	
         	checkLottoNumber(randomNums, mine, bonusNum);
         	
         	if(LottoSimulator.prize1 == 1) {
-        		System.out.println(LottoSimulator.prize1);
-        		System.out.println(LottoSimulator.prize2);
-        		System.out.println(LottoSimulator.prize3);
-        		System.out.println(LottoSimulator.prize4);
-        		System.out.println(LottoSimulator.prize5);
-        		System.out.printf("1등이 되기까지 누적당첨횟수: %d\n",
+        		System.out.printf("당첨 번호: %s + 보너스 번호: %d\n",
+        				randomNums, bonusNum);
+        		System.out.println("나의 1등 당첨된 번호: "+mine);
+        		
+        		System.out.printf("1등이 되기까지 누적 당첨 횟수: 총%d회\n1등: %d회\n2등: %d회\n3등: %d회\n4등: %d회\n5등: %d회\n꽝: %d회\n",
         			(LottoSimulator.prize1+LottoSimulator.prize2
         			+LottoSimulator.prize3+LottoSimulator.prize4
-        			+LottoSimulator.prize5));
-        		
+        			+LottoSimulator.prize5),
+        			LottoSimulator.prize1,
+        			LottoSimulator.prize2,
+        			LottoSimulator.prize3,
+        			LottoSimulator.prize4,
+        			LottoSimulator.prize5,
+        			LottoSimulator.failCnt);
+//        		long amount = 1000*tryNum;
+        		System.out.println("구매 장수: "+tryNum+"장");
+        		System.out.println("구매 금액: "+cost+"원");
         		break;
+        	}else {
+        		System.out.println("로또 "+tryNum+"째 구매중...");
         	}
         	
         }
-        long amount = 1000*tryNum;
-        System.out.println("구매 금액: "+amount);
+
         	
    	
     	

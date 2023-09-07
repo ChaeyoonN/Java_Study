@@ -41,6 +41,8 @@ public class CompareStr {
 		System.out.println("== 연산자의 결과: "+(password==kim.pw));//객체가 같니 비교
 		System.out.println("equals의 결과: "+(password.equals(kim.pw)));
 
+		
+		sc.close();
 	}
 
 }

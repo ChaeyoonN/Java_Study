@@ -11,12 +11,12 @@ public class MainClass {
 //		hong.personInfo();
 			
 		//객체 타입의 변수를 출력하거나 값을 얻을 때는
-		//뒤에 자동으로 toString()이 붙어서 진행됩니다.
+		//뒤에 자동으로 toString()이 붙어서 진행됩니다. 
 		System.out.println(park.toString());
 		System.out.println(hong.toString());
 		System.out.println(park);
 		System.out.println(hong);
-		//원래는 주소값 나오도록 Object에서 정의됨. -> toString()을 오버라이딩해서 사용 가능.
+		//원래는 주소값 나오도록 Object에서 정의됨. -> toString()을 오버라이딩해서 사용가능하므로 오버라이딩함.
 		
 		if(hong.equals(park)) {
 			System.out.println("이름과 나이가 같네요!");

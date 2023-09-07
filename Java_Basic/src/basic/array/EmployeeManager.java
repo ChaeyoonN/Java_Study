@@ -120,10 +120,11 @@ public class EmployeeManager {
 	            		System.out.println("부서: "+departments[i]);
 	            		searchChk = true;
             		}
-            		if(i==count) {
-            			System.out.println("조회하신 사원의 정보가 없습니다!");
-            		}
+            		
             	}
+//            	if(i==count) {//검색한 사원정보 출력하고도 수행되는 문제가 있으므로 x
+//            			System.out.println("조회하신 사원의 정보가 없습니다!");
+//            	}
             	if(!searchChk) {
             		System.out.println("조회하신 사원의 정보가 없습니다.");
             	}

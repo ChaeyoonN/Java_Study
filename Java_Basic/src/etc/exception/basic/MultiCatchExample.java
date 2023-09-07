@@ -46,6 +46,8 @@ public class MultiCatchExample {
 			System.out.println("에러 원인: "+e.getMessage());
 		}
 		
+		
+		sc.close();
 
 	}
 
