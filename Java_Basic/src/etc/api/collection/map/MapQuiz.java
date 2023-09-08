@@ -52,6 +52,30 @@ public class MapQuiz {
 			
 		}
 		
+//		while(true) {
+//			System.out.print("영단어: ");
+//			String eng = sc.next();
+//			
+//			if(eng.equals("그만")) {
+//				System.out.println("입력을 종료합니다.");
+//				break;
+//			} else if(engKor.containsKey(eng)) {
+//				System.out.println("이미 등록한 단어입니다.");
+//				continue;
+//			}
+//			
+//			System.out.print("한글 뜻: ");
+//			String kor = sc.next();
+//			engKor.put(eng, kor);
+//			System.out.println("영단어 등록 완료!\n");
+//		}
+//		
+//		System.out.println("\n*** 오늘 등록한 단어 ***");
+//		Set<String> engs = engKor.keySet();
+//		for(String s : engs) {
+//			System.out.println(s + " : " + engKor.get(s));
+//		}
+		
 		
 		
 		sc.close();

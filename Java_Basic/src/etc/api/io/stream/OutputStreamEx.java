@@ -38,7 +38,7 @@ public class OutputStreamEx {
 			try {
 				//스트림을 더 이상 사용하지 않는 경우
 				//시스템 자원을 반납하는 코드를 꼭 작성합니다.
-				fos.close();
+				fos.close(); sc.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -46,7 +46,7 @@ public class OutputStreamEx {
 		}
 		
 		
-		sc.close();
+		
 	}
 
 }
