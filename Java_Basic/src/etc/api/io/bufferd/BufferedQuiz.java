@@ -44,7 +44,13 @@ public class BufferedQuiz {
 		if(!file.exists()) {
 			file.mkdir();
 			
-			System.out.print("생성할 파일명 입력:");
+
+		}else {
+			System.out.println("해당 폴더가 존재합니다.");
+		}
+		
+		
+		System.out.print("생성할 파일명 입력:");
 			String name = sc.next();
 			sc.nextLine();
 			try {
@@ -62,7 +68,7 @@ public class BufferedQuiz {
 						break;
 					}
 					
-					text.append(content+"\r\n");//내용 추가
+					text.append(content+"\r\n");//text에 내용 추가
 				}
 				
 				
@@ -72,7 +78,6 @@ public class BufferedQuiz {
 				}
 				System.out.println("작성 완료!");
 				
-				//파일을 읽어서 콘솔에 출력
 				
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -87,6 +92,7 @@ public class BufferedQuiz {
 				}
 			}
 			
+			//파일을 읽어서 콘솔에 출력
 			FileReader fr = null;
 			BufferedReader br = null;
 							
@@ -110,13 +116,6 @@ public class BufferedQuiz {
 				}
 				
 			}
-			
-			
-		}else {
-			System.out.println("해당 폴더가 존재합니다.");
-		}
-		
-		
 
 		
 		
