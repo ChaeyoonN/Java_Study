@@ -1,9 +1,9 @@
-package etc.lambda.stream;
+package etc.stream;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static etc.lambda.stream.Menu.*;
+import static etc.stream.Menu.*;
 
 public class Mapping {
 

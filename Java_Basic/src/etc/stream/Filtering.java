@@ -1,10 +1,8 @@
-package etc.lambda.stream;
+package etc.stream;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.stream.Collectors;
 
-import static etc.lambda.stream.Menu.*;
+import static etc.stream.Menu.*;
 import static java.util.stream.Collectors.*;
 
 public class Filtering {

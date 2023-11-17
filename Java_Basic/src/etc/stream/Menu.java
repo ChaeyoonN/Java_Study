@@ -1,4 +1,4 @@
-package etc.lambda.stream;
+package etc.stream;
 
 import java.util.List;
 

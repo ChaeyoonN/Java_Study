@@ -1,4 +1,4 @@
-package etc.lambda.stream;
+package etc.stream;
 
 public class Dish {
     private final String name; // 요리 이름
