@@ -1,10 +1,7 @@
 package etc.stream;
 
-import java.util.Comparator;
-import java.util.Optional;
-
-import static etc.stream.Menu.*;
-import static java.util.Comparator.*;
+import static etc.stream.Menu.menuList;
+import static java.util.Comparator.comparing;
 
 public class Finding {
     public static void main(String[] args) {

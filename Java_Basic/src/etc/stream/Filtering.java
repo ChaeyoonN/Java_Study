@@ -2,8 +2,8 @@ package etc.stream;
 
 import java.util.List;
 
-import static etc.stream.Menu.*;
-import static java.util.stream.Collectors.*;
+import static etc.stream.Menu.menuList;
+import static java.util.stream.Collectors.toList;
 
 public class Filtering {
     public static void main(String[] args) {

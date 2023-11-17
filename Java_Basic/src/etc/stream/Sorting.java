@@ -1,11 +1,8 @@
 package etc.stream;
 
-import java.util.Comparator;
-import java.util.stream.Collectors;
-
-import static etc.stream.Menu.*;
-import static java.util.Comparator.*;
-import static java.util.stream.Collectors.*;
+import static etc.stream.Menu.menuList;
+import static java.util.Comparator.comparing;
+import static java.util.stream.Collectors.toList;
 
 public class Sorting {
     public static void main(String[] args) {

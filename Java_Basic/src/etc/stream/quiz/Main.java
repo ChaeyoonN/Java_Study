@@ -1,11 +1,9 @@
 package etc.stream.quiz;
 
-import java.util.Comparator;
 import java.util.List;
-import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 
-import static java.util.Comparator.*;
+import static java.util.Comparator.comparing;
 
 public class Main {
     public static void main(String[] args) {
