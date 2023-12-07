@@ -89,9 +89,14 @@ public class Main {
 
 
         // 연습 8. 가장 작은 거래액을 가진 거래정보 탐색
-        transactions.stream()
-                .min(comparing(transaction -> transaction.getValue()))
-                .ifPresent(System.out::println); // .get()으로 해도됌.
+//        transactions.stream()
+//                .min(comparing(transaction -> transaction.getValue()))
+//                .ifPresent(System.out::println); // .get()으로 해도됌.
+
+        Transaction transaction = transactions.stream()
+                .min(comparing(Transaction::getValue))
+                .get();
+        System.out.println("transaction = " + transaction);
 
 
 
